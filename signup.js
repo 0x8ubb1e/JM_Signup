@@ -15,6 +15,10 @@
     'use strict';
 
     // Your code here...
+    // 写入自己的JM网址
+    // const url = "https://18comic.vip/user/*/daily"; // 示例
+    const url = "";
+    
     // 定义一个通用的判断函数
     function startClick(id, interval = 1000, delay) {
         const maxAttempts = 100;
@@ -123,7 +127,7 @@
             alert("今日已签到");
         }, 6000); // 假设所有操作在 6000ms 内完成
     }
-    if (window.location.href === "https://18comic.vip/user/kafka97083/daily") {
+    if (window.location.href === url) {
         login();
     }
 
@@ -143,7 +147,7 @@
         const delay = targetTime - now;
 
         setTimeout(() => {
-            window.open('https://18comic.vip/user/kafka97083/daily', '_blank');
+            window.open(url, '_blank');
             // 设置下一次执行（每天）
             openWebsiteDaily();
         }, delay);
